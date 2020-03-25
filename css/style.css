@@ -144,6 +144,10 @@ article {
     width: 100%;
 }
 
+#infographicDesktop {
+    display: none;
+}
+
 /*Herunder er styles til "syv tips" artiklen*/
 #sevenTipsTitle {
     background-image: url(/images/article2.JPG);
@@ -197,43 +201,79 @@ article {
         box-sizing: border-box;
     }
     #closeNav,
-    #openNav, 
-    #logoTop {
+    #openNav,
+    #logoTop,
+    #infographicMobil {
         /*Disse funktioner vil vi ikke vise*/
         display: none;
     }
     #logo {
-    width: 90%;
-    margin-top: 40px;
+        width: 90%;
+        margin-top: 40px;
     }
-    
+
     main {
         margin-left: 250px;
     }
-    
+
     .citat {
-    height: 400px;
-}
+        height: 400px;
+        font-size: 22px;
+    }
     .articles {
-    flex-direction: row;
-    
-}
+        flex-direction: row;
+        /*får atiklerne til at gå på flere linjer med flex-wrap*/
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1500px;
+        margin: auto;
+    }
     .articles a {
-    width: 80%;
-    height: 150px;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #183f1d;
-    color: white;
-    /*Billedet tilpasses feltet*/
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        width: 25%;
+        min-width: 222px;
+    }
+    #infographicDesktop {
+        display: block;
+    }
+
+    .tip {
+        display: flex;
+        margin-top: 70px;
+    }
+
+    /*gør at teksten giver plads til billedet*/
+    .tip div {
+        flex: 1;
+        margin-right:90px;
+        
+    }
+
+    .tip figure {
+        width: 45%;
+    }
     
+    .image-text-switch div {
+        order: 1;
+        margin-left: 90px;
+        margin-right: 0;
+        
+    }
+    .tip figure.picture {
+        width: 100%
+    }
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
