@@ -1,0 +1,263 @@
+/* Mit gennerelle stylesheet*/
+
+body {
+    font-family: "Courier Prime", monospace;
+    margin: 0;
+}
+#menu {
+    /* placering af menu (Gør så vi kan placere navbaren i forhold til browser)*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    /* farve for baggrunden */
+    background-color: #f0f0f0;
+    /* flexbox til placering af indhold*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* vi løfter menuen over andet content*/
+    z-index: 5;
+    /* menubaren animeres ind*/
+    transition: left 0.3s linear;
+}
+
+/*Denne style bliver brugt når der er #menu i url'en. Det bruger vi til at vise navbaren, når vi trykker på "åben navbar" ikonet*/
+#menu:target {
+    left: 0;
+}
+
+/*logoet i navbaren*/
+#logo {
+    width: 70%;
+    margin-top: 90px;
+    margin-right: 10%;
+}
+/*Jeg fjerner punkterne fra listen*/
+#menuPunkter {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+/*Jeg adskiller mine menupunkter lidt. og bruger flex så ikonet og teksten passer*/
+#menuPunkter a {
+    font-size: 17px;
+    display: flex;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+/*Jeg fjerner stregen og ændre farven*/
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#closeNav,
+#openNav {
+    /*Gør så vi kan placere krydset i navbaren som vi vil*/
+    position: absolute;
+
+    top: 20px;
+    font-size: 35px;
+}
+
+/*knapper til åben og luk af navbar*/
+#closeNav {
+    right: 30px;
+}
+#openNav {
+    left: 30px;
+}
+
+/*Tilpasning af logo i toppen på mobil*/
+#logoTop {
+    /*Fordi der er et link sætter vi display block for at kunne bruge margin og width*/
+    display: block;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-bottom: 15px;
+}
+
+#logoTop img {
+    width: 100%;
+}
+
+/*text i toppen ved forside og artikler*/
+.citat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 222px;
+    padding: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.articles a {
+    width: 80%;
+    height: 150px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #183f1d;
+    color: white;
+    /*Billedet tilpasses feltet*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#article2 {
+    background-image: url("/images/article2.JPG");
+}
+
+#article3 {
+    background-image: url("/images/article3.JPG");
+}
+
+/*Herunder er de generelle styles til mine artikler*/
+.article-title {
+    color: white;
+    background-color: #183f1d;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*Herunder er styles til "syv tips" artiklen*/
+#sevenTipsTitle {
+    background-image: url(/images/article2.JPG);
+}
+
+.tip {
+    width: 80%;
+}
+
+.tip figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tip figure img {
+    width: 100%;
+}
+
+.tip figure figcaption {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
+}
+
+.tip .list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#lystLivTitle {
+    background-image: url(/images/article3.JPG);
+}
+
+#textBox {
+    color: white;
+    background-color: #183f1d;
+    padding: 20px;
+}
+
+/*Herunder benytter vi os af mediaquery til at lave desktop styles*/
+@media only screen and (min-width: 800px) {
+    #menu {
+        /* ny placering af menu*/
+        left: 0;
+        width: 250px;
+        padding: 0 20px;
+        /*box-sizing bruges for ikke at ligge padding til i bredden*/
+        box-sizing: border-box;
+    }
+    #closeNav,
+    #openNav, 
+    #logoTop {
+        /*Disse funktioner vil vi ikke vise*/
+        display: none;
+    }
+    #logo {
+    width: 90%;
+    margin-top: 40px;
+    }
+    
+    main {
+        margin-left: 250px;
+    }
+    
+    .citat {
+    height: 400px;
+}
+    .articles {
+    flex-direction: row;
+    
+}
+    .articles a {
+    width: 80%;
+    height: 150px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #183f1d;
+    color: white;
+    /*Billedet tilpasses feltet*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
